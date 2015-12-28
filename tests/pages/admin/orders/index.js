@@ -1,4 +1,4 @@
-import PageObject from 'restaurant-menue-20/tests/page-object';
+import PageObject from 'restaurant-menu-20/tests/page-object';
 
 //Destructuring//
 

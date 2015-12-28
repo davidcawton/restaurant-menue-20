@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'restaurant-menue-20',
+    modulePrefix: 'restaurant-menu-20',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
