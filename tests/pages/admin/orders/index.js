@@ -4,6 +4,10 @@ import PageObject from 'restaurant-menue-20/tests/page-object';
 
 let { visitable, collection, text } = PageObject;
 
+function role(name) {
+  return `[data-role=${name}]`;
+}
+
 export default PageObject.create({
   visit: visitable('/admin/orders'),
 
@@ -11,20 +15,20 @@ export default PageObject.create({
   //topNav: Edit Menue Button & View Orders Button //
 
   orders: collection({
-    itemScope: '.order-detail',
+    itemScope: role('order-detail'),
 
     item: {
       orderItems: collection({
-        itemScope: '.order-detail-order-item',
+        itemScope: role('order-detail-order-item'),
 
         item: {
-          name: text('.order-detail-order-item__name'),
-          quantity: text('.order-detail-order-item__quantity'),
-          price: text('.order-detail-order-item__price'),
+          name: text(role('order-detail-order-item__name')),
+          quantity: text(role('order-detail-order-item__quantity')),
+          price: text(role('order-detail-order-item__price')),
         },
       }),
 
-      total: text('.order-detail__total'),
+      total: text(role('order-detail__total')),
     },
   }),
 });

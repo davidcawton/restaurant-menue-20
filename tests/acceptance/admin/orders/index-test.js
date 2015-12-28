@@ -9,7 +9,7 @@ test('A user can visit the order review page', function(assert) {
   page.visit();
 
   andThen(function() {
-    assert.equal(currentURL(), '/admin/orders/index');
+    assert.equal(currentURL(), '/admin/orders');
   });
 });
 
