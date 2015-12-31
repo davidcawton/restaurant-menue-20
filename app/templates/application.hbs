@@ -1,18 +1,13 @@
 <nav class="nav-bar">
   <h3 class="nav-bar__title">Dave's Hot Lunch</h3>
   <ul class="nav-bar__list">
-    <li class="nav-bar__list-item">Login</li>
+    <li class="nav-bar__list-item">{{#link-to 'admin'}}Admin{{/link-to}}</li>
     <li class="nav-bar__list-item">My Cart</li>
   </ul>
 </nav>
 
 {{outlet}}
 
-<footer class='footer'>
-  <p class="footer__text">
-    Dave's Hot Lunch
-  </p>
-</footer>
 
 
 <style media="screen">
@@ -31,6 +26,10 @@
   border: 2px #963019 solid;
 }
 
+body {
+  padding-top: 80px;
+}
+
 .nav-bar__list {
   display: flex;
   list-style: none;
@@ -42,11 +41,18 @@
 .nav-bar__list-item {
   padding: 10px;
   margin: 0 10px;
-  border: 1px #f6f1ed solid;
   color: #f6f1ed;
   background-color: #16174f;
 }
 
+.nav-bar__list-item a {
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px #f6f1ed solid;
+  color: #f6f1ed;
+  background-color: #16174f;
+  text-decoration: none;
+}
 .nav-bar__title {
   padding-left: 10px;
   color: #f6f1ed;

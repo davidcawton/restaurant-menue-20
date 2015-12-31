@@ -1,1 +1,24 @@
-{{outlet}}
+<div class="newItem-form">
+  {{#simple-form as |newItem|}}
+    <label class='new-item__list-item' for="newItem.name">Name</label>
+    {{input class='new-item__list-item' value=newItem.name placeholder='Item Name'}}
+
+    <label class='new-item__list-item' for="newItem.description">Description</label>
+    {{input class='new-item__list-item' value=newItem.description placeholder='Description'}}
+
+    <label class='new-item__list-item' for="newItem.price">Price</label>
+    {{input class='new-item__list-item' value=newItem.price placeholder='Price'}}
+
+    <label class='new-item__list-item' for="newItem.category">Type</label>
+    <select class='new-item__list-item' value=newItem.category placeholder="Type">
+      <option value=newItem.entree>Entree</option>
+      <option value=newItem.drink>Drink</option>
+    </select>
+
+    <button class="new-item__submit-btn">Submit</button>
+  {{/simple-form}}
+  </div>
+
+<style media="screen">
+
+</style>

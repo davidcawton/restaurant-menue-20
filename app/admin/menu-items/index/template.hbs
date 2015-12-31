@@ -1,0 +1,11 @@
+{{outlet}}
+<h4>Current Menu Items</h4>
+<ul class="admin-menu-items">
+  {{#each model as |foo|}}
+  <li class="menu-item__name">
+    {{foo.name}}
+  </li>
+  {{/each}}
+</ul>
+
+{{#link-to 'admin.menu-items.new'}}New Item{{/link-to}}
