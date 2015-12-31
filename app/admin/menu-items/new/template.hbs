@@ -1,24 +1,95 @@
-<div class="newItem-form">
+<h4 class="new-item-title">Create A New Menu Item</h4>
+<ul class="new-item-form">
   {{#simple-form as |newItem|}}
-    <label class='new-item__list-item' for="newItem.name">Name</label>
-    {{input class='new-item__list-item' value=newItem.name placeholder='Item Name'}}
-
-    <label class='new-item__list-item' for="newItem.description">Description</label>
-    {{input class='new-item__list-item' value=newItem.description placeholder='Description'}}
-
-    <label class='new-item__list-item' for="newItem.price">Price</label>
-    {{input class='new-item__list-item' value=newItem.price placeholder='Price'}}
-
-    <label class='new-item__list-item' for="newItem.category">Type</label>
-    <select class='new-item__list-item' value=newItem.category placeholder="Type">
-      <option value=newItem.entree>Entree</option>
-      <option value=newItem.drink>Drink</option>
-    </select>
-
+    <li class="new-item-li" id="first-new-item-li">
+      <label class='new-item-li__label' for="newItem.name">Name</label>
+      {{input class='new-item-li__input' value=newItem.name placeholder='Item Name'}}
+    </li>
+    <li class="new-item-li">
+      <label class='new-item-li__label' for="newItem.description">Description</label>
+      {{input class='new-item-li__input' value=newItem.description placeholder='Description'}}
+    </li>
+    <li class="new-item-li">
+      <label class='new-item-li__label' for="newItem.price">Price</label>
+      {{input class='new-item-li__input' value=newItem.price placeholder='Price'}}
+    </li>
+    <li class="new-item-li" id="last-new-item-li">
+      <label class='new-item-li__label' for="newItem.category">Type</label>
+      <select class='new-item-li__input' value=newItem.category placeholder="Type">
+        <option value=newItem.entree>Entree</option>
+        <option value=newItem.drink>Drink</option>
+      </select>
+    </li>
     <button class="new-item__submit-btn">Submit</button>
   {{/simple-form}}
-  </div>
+</ul>
 
 <style media="screen">
+
+  .new-item-form, .new-item-title {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    padding-left: 0;
+    background: #f6f1ed
+  }
+
+  .new-item-title {
+    background: #963019;
+    margin-top: 20px;
+    border: 1px solid #111;
+    padding: 10px 0;
+    color: #f6f1ed;
+  }
+
+  .new-item-form {
+    border: 1px solid #111;
+    list-style: none;
+  }
+
+  .new-item-li {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    font-size: 16px;
+    background: rgba(150, 48, 25, 0.1);
+    border-bottom: 1px solid #111;
+    padding: 5px;
+  }
+
+  #first-new-item-li {
+    margin-top: 30px;
+  }
+
+  #last-new-item-li {
+    margin-bottom: 20px;
+  }
+  .new-item-li__label, .new-item-li__input {
+    margin: 10px;
+    text-align: left;
+
+  }
+
+  .new-item-li__input {
+    background: rgba(150, 48, 25, 0);
+    border-style: none;
+    text-align: right;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+  .new-item__submit-btn {
+    float: right;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgb(22, 23, 79);
+    color:
+    border-style: none;
+    border: 1px #111 solid;
+    color: #f6f1ed;
+  }
 
 </style>

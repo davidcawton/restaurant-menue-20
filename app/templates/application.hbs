@@ -1,5 +1,7 @@
 <nav class="nav-bar">
+  {{#link-to 'menu'}}
   <h3 class="nav-bar__title">Dave's Hot Lunch</h3>
+  {{/link-to}}
   <ul class="nav-bar__list">
     <li class="nav-bar__list-item">{{#link-to 'admin'}}Admin{{/link-to}}</li>
     <li class="nav-bar__list-item">My Cart</li>
@@ -56,6 +58,7 @@ body {
 .nav-bar__title {
   padding-left: 10px;
   color: #f6f1ed;
+  text-decoration: none;
 }
 
 
