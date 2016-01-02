@@ -1,26 +1,27 @@
 <h4 class="new-item-title">Create A New Menu Item</h4>
 <ul class="new-item-form">
-  {{#simple-form onSubmit="addMenuItem" as |newItem|}}
+
+  {{#simple-form onsubmit="addMenuItem" as |formValues|}}
     <li class="new-item-li" id="first-new-item-li">
-      <label class='new-item-li__label' for="newItem.name">Name</label>
-      {{input class='new-item-li__input' value=newItem.name placeholder='Item Name'}}
+      <label class='new-item-li__label' for="formValues.name">Name</label>
+      {{input class='new-item-li__input' value=formValues.name placeholder='Item Name'}}
     </li>
     <li class="new-item-li">
-      <label class='new-item-li__label' for="newItem.description">Description</label>
-      {{input class='new-item-li__input' value=newItem.description placeholder='Description'}}
+      <label class='new-item-li__label' for="formValues.description">Description</label>
+      {{input class='new-item-li__input' value=formValues.description placeholder='Description'}}
     </li>
     <li class="new-item-li">
-      <label class='new-item-li__label' for="newItem.price">Price</label>
-      {{input class='new-item-li__input' value=newItem.price placeholder='Price'}}
+      <label class='new-item-li__label' for="formValues.price">Price</label>
+      {{input class='new-item-li__input' value=formValues.price placeholder='Price'}}
     </li>
     <li class="new-item-li" id="last-new-item-li">
-      <label class='new-item-li__label' for="newItem.category">Type</label>
-      <select class='new-item-li__input' value=newItem.category placeholder="Type">
-        <option value=newItem.entree>Entree</option>
-        <option value=newItem.drink>Drink</option>
+      <label class='new-item-li__label' for="formValues.category">Type</label>
+      <select class='new-item-li__input' value=formValues.category placeholder="Type">
+        <option value=formValues.entree>Entree</option>
+        <option value=formValues.drink>Drink</option>
       </select>
     </li>
-    <button  class="new-item__submit-btn">Submit</button>
+    <button class="new-item__submit-btn">Submit</button>
   {{/simple-form}}
 </ul>
 

@@ -13,7 +13,7 @@ Router.map(function() {
       this.route('new');
 
       this.route('edit',
-      {  path: '/:menu-item_id',
+      {  path: '/:menu-item._id',
       });
     });
   });

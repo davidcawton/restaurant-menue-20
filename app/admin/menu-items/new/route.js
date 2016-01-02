@@ -2,10 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
-    addMenuItem(newItem) {
-      let item = this.store.createRecord('newItem', newItem);
-      addMenuItem.save().then(() => {
-        this.transitionTo('admin');
+    addMenuItem(formData) {
+      let menuItem = this.store.createRecord('menu-item');
+      menuItem.setProperties(formData);
+      menuItem.save().then(() => {
+        this.transitionTo('admin.menu-items');
       });
     },
   },

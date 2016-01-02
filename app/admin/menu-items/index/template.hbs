@@ -3,11 +3,10 @@
 <ul class="admin-menu-items">
   {{#each model as |menuItemsList|}}
   <li class="admin-menu-item__name">
-    {{menuItemsList.name}}
+   {{#link-to 'edit' 'admin.menu-items.edit' value }}{{menuItemsList.name}}{{/link-to}}
   </li>
   {{/each}}
 </ul>
-
 <div class="admin-btn-space">
   {{#link-to 'admin.menu-items.new'}}
     <button class="admin-menu-items_new-btn">New Item</button>
