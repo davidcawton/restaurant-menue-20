@@ -1,6 +1,6 @@
 <h4 class="new-item-title">Create A New Menu Item</h4>
 <ul class="new-item-form">
-  {{#simple-form as |newItem|}}
+  {{#simple-form onSubmit="addMenuItem" as |newItem|}}
     <li class="new-item-li" id="first-new-item-li">
       <label class='new-item-li__label' for="newItem.name">Name</label>
       {{input class='new-item-li__input' value=newItem.name placeholder='Item Name'}}
