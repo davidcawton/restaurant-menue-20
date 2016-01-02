@@ -21,6 +21,7 @@ Router.map(function() {
   this.route('menu', {
     path: '/',
   });
+  this.route('order');
 });
 
 export default Router;
