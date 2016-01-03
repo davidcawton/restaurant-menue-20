@@ -5,7 +5,7 @@
   {{#simple-form onsubmit="saveItem" as |formValues|}}
     <li class="new-item-li" id="first-new-item-li">
       <label class='new-item-li__label' for="formValues.name">Name</label>
-      {{input class='new-item-li__input' value=formValues.name placeholder='Item Name'}}
+      {{input class='new-item-li__input' value=formValues.name}}
     </li>
     <li class="new-item-li">
       <label class='new-item-li__label' for="formValues.description">Description</label>
@@ -22,7 +22,8 @@
         <option value=formValues.drink>Drink</option>
       </select>
     </li>
-    <button class="new-item__submit-btn">Submit</button>
+    <button class="btn btn__submit-btn">Submit</button>
+    <button {{action 'removeItem'}} class="btn btn__delete__btn">Delete</button>
   {{/simple-form}}
 </ul>
 
@@ -83,16 +84,19 @@
     text-decoration: underline;
   }
 
-  .new-item__submit-btn {
+  .btn__submit-btn, .btn__delete__btn {
     float: right;
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-right: 10px;
     background: rgb(22, 23, 79);
     color:
     border-style: none;
     border: 1px #111 solid;
     color: #f6f1ed;
   }
+
+
 
 </style>
