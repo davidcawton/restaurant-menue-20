@@ -1,7 +1,7 @@
 import { test } from 'qunit';
-import moduleForAcceptance from 'restaurant-menue-20/tests/helpers/module-for-acceptance';
+import moduleForAcceptance from 'restaurant-menu-20/tests/helpers/module-for-acceptance';
 
-import page from 'restaurant-menue-20/tests/pages/admin/orders/index';
+import page from 'restaurant-menu-20/tests/pages/admin/orders/index';
 
 moduleForAcceptance('Acceptance | admin/orders/index');
 
@@ -9,7 +9,7 @@ test('A user can visit the order review page', function(assert) {
   page.visit();
 
   andThen(function() {
-    assert.equal(currentURL(), '/admin/orders/index');
+    assert.equal(currentURL(), '/admin/orders');
   });
 });
 

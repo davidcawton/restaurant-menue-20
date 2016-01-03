@@ -1,0 +1,64 @@
+<h4>Dinner Menu</h4>
+
+{{#group-categories class="category" items=model tagName='ul' as |category|}}
+  <li class="category__group">
+    <h4 class="category__title">{{category.name}}</h4>
+    <ul class="category__items">
+      {{#each category.items as |menuItem|}}
+        {{menu-item-result menuItem=menuItem}}
+      {{/each}}
+    </ul>
+  </li>
+{{/group-categories}}
+
+<style media="screen">
+
+  .category {
+    background: #f6f1ed;
+    width: 50%;
+    border: 2px #16174f solid;
+    padding-left: 0;
+    margin-left: 10px;
+  }
+
+  .category__group {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .category__title {
+    border-bottom: 2px #667467 solid;
+    background: #963019;
+    color: #f6f1ed;
+    margin-top: 0;
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  .category__items {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .category__items li {
+    list-style: none;
+    text-align: center;
+  }
+
+  .menu-item__name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #16174f;
+  }
+
+.add-to-cart {
+  float: right;
+  margin: 10px;
+  background: #963019;
+  border-style: none;
+  color: #f6f1ed;
+  height: 30px;
+}
+
+</style>

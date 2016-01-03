@@ -2,7 +2,19 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'restaurant-menue-20',
+    //jscs: disable
+    apiHost: 'https://frozen-coast-4553.herokuapp.com',
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self' http://fonts.gstatic.com",
+      'connect-src': "'self' https://frozen-coast-4553.herokuapp.com",
+      'img-src': "'self'",
+      'style-src': "'self' http://fonts.googleapis.com",
+      'media-src': "'self'"
+    },
+
+    modulePrefix: 'restaurant-menu-20',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -22,6 +34,9 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV['ember-cli-mirage'] = {
+      enabled: false,
+    };
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
