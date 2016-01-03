@@ -12,8 +12,8 @@ Router.map(function() {
     this.route('menu-items', function() {
       this.route('new');
 
-      this.route('edit',
-      {  path: '/:menu-item._id',
+      this.route('edit', {
+        path: '/:menu-item._id',
       });
     });
   });

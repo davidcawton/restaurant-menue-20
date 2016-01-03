@@ -3,7 +3,7 @@
 <ul class="admin-menu-items">
   {{#each model as |menuItemsList|}}
   <li class="admin-menu-item__name">
-   {{#link-to 'edit' 'admin.menu-items.edit' value }}{{menuItemsList.name}}{{/link-to}}
+   {{#link-to "admin.menu-items.edit" menuItemsList }}{{menuItemsList.name}}{{/link-to}}
   </li>
   {{/each}}
 </ul>
@@ -36,6 +36,8 @@
 
   .admin-menu-items{
     border: 1px solid #111;
+    display: flex;
+    flex-direction: column;
   }
 
   .admin-menu-item__name {
