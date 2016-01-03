@@ -12,8 +12,10 @@ Router.map(function() {
     this.route('menu-items', function() {
       this.route('new');
 
+      this.route('details');
+
       this.route('edit', {
-        path: '/:menu-item._id',
+        path: '/:menu-item._id/',
       });
     });
   });
@@ -22,6 +24,7 @@ Router.map(function() {
     path: '/',
   });
   this.route('order');
+
 });
 
 export default Router;
